@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: tetris
-        image: shaikmustafa/cycle
+        image: shaikmustafa/kubernetesproject:flm
         ports:
         - containerPort: 3000   # Use port 3000
 
