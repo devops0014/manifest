@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: tetris
-        image: shaikmustafa/prompt:mydockerimage
+        image: shaikmustafa/prompt:mydockerimagev2
         ports:
         - containerPort: 3000   # Use port 3000
 
