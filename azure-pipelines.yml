@@ -15,3 +15,6 @@ steps:
 
 - script: echo "Wecome to Azure class"
   displayName: 'stage-3'
+
+- script: echo "This is my last stage"
+  displayName: 'stage-4'
