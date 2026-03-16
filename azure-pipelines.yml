@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: flm-pool
+  name: bhargav-pool
 
 steps:
 - script: echo Hello, world!
