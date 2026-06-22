@@ -1,0 +1,28 @@
+apiVersion: rbac.authorization.k8s.io/v1
+
+kind: RoleBinding
+
+
+metadata:
+
+  name: mustafa-rolebinding
+
+  namespace: dev
+
+
+subjects:
+
+- kind: User
+
+  name: mustafa
+
+  apiGroup: rbac.authorization.k8s.io
+
+
+roleRef:
+
+  kind: Role
+
+  name: mustafa-role
+
+  apiGroup: rbac.authorization.k8s.io
