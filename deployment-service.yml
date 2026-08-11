@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
       - name: tetris
-        image: shaikmustafa/mytetrisgame:v2
+        image: shaikmustafa/dm
         ports:
-        - containerPort: 3000   # Use port 3000
+        - containerPort: 80   
 
 ---
 apiVersion: v1
@@ -30,5 +30,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
-    targetPort: 3000
+    targetPort: 80
   type: LoadBalancer
