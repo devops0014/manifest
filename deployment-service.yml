@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: tetris
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: tetris
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: tetris
-        image: shaikmustafa/dm
+        image: shaikmustafa/cycle
         ports:
         - containerPort: 80   
 
