@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: balachandra
+
+spec:
+  replicas: 3
+  revisionHistoryLimit: 0
+
+  selector:
+    matchLabels:
+      app: swiggy
+
+  template:
+    metadata:
+      labels:
+        app: swiggy
+
+    spec:
+      containers:
+
+        - name: cont1
+          image: shaikmustafa/dm
+
+          ports:
+            - containerPort: 80
+
+          volumeMounts:
+            - name: balavolume
+              mountPath: /tmp/jenkins
+
+
+        - name: cont2
+          image: ubuntu
+
+          volumeMounts:
+            - name: balavolume
+              mountPath: /tmp/docker
+
+
+      volumes:
+        - name: balavolume
+          emptyDir: {}
